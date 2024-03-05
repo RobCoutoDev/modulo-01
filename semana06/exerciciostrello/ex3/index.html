@@ -1,0 +1,13 @@
+<script>
+    const getData = async () => {
+      const response = await fetch('data.json');
+      const data = await response.json();
+      
+      document.getElementById('json-content').innerHTML = JSON.stringify(data, null, 2);
+    };
+    
+    getData();
+    </script>
+    
+    <div id="json-content"></div>
+    
